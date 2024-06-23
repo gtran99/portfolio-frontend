@@ -4,9 +4,10 @@ const Portfolio = () => {
     const [portfolio, setPortfolio] = useState(null);
 
     useEffect(() => {
-        fetch('https://portfolio-backend-9tue.onrender.com')
+        fetch('https://portfolio-backend-9tue.onrender.com/api/portfolio')
             .then(response => response.json())
-            .then(data => setPortfolio(data));
+            .then(data => setPortfolio(data))
+            .catch(error => console.error('Error fetching portfolio data:', error));
     }, []);
 
     if (!portfolio) {
