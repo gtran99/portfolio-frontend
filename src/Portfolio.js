@@ -16,7 +16,6 @@ const Portfolio = () => {
 
     return (
         <div>
-            <h1>{portfolio.name}</h1>
             <p>{portfolio.bio}</p>
             <h2>Projects</h2>
             <ul>
